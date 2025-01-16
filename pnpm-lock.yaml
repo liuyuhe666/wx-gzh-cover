@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@ant-design/icons':
+        specifier: ^5.5.2
+        version: 5.5.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       antd:
         specifier: ^5.23.1
         version: 5.23.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      modern-screenshot:
+        specifier: ^4.5.5
+        version: 4.5.5
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -33,6 +39,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.3.4
         version: 4.3.4(vite@6.0.7(yaml@2.7.0))
+      csstype:
+        specifier: ^3.1.3
+        version: 3.1.3
       eslint:
         specifier: ^9.18.0
         version: 9.18.0
@@ -1585,6 +1594,9 @@ packages:
 
   mlly@1.7.4:
     resolution: {integrity: sha512-qmdSIPC4bDJXgZTCR7XosJiNKySV7O215tsPtDN9iEO/7q/76b/ijtgRu/+epFXSJhijtTCCGp3DWS549P3xKw==}
+
+  modern-screenshot@4.5.5:
+    resolution: {integrity: sha512-k5AC0UjY8YccnKn53upeQMzgDdPYkDN/706ma3yPHCwOZi+AoL0NeMlLS3nQwA/s0xrM7s8WO+UWnx5YJNpQeA==}
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
@@ -4101,6 +4113,8 @@ snapshots:
       pathe: 2.0.1
       pkg-types: 1.3.1
       ufo: 1.5.4
+
+  modern-screenshot@4.5.5: {}
 
   ms@2.1.3: {}
 
