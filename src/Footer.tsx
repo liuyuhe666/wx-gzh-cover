@@ -1,13 +1,14 @@
-import { Flex } from 'antd'
+import { Flex, Typography } from 'antd'
 
 export default function Footer() {
+  const { Text, Link } = Typography
   return (
     <>
       <Flex gap="small" align="center" justify="center">
-        <span>Made with</span>
+        <Text>Made with</Text>
         <svg viewBox="0 0 1117 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12659" width="20" height="20"><path d="M1101.743993 317.287226a288.382004 288.382004 0 0 0-550.141266-146.704337 288.382004 288.382004 0 0 0-550.141266 146.704337s3.72346 360.430961 551.816823 646.113457c548.000276-285.682495 548.465709-646.113456 548.465709-646.113457zM296.545694 63.62649a47.287946 47.287946 0 1 1 0.186173 94.575893 47.287946 47.287946 0 0 1-0.093087-94.575893zM148.817404 417.634483a49.33585 49.33585 0 0 1-60.78549-34.348922 317.145735 317.145735 0 0 1-11.821986-72.886736c-4.468152-116.637395 67.394632-173.978685 70.931919-176.864367a49.33585 49.33585 0 0 1 61.250923 77.541062c-2.606422 2.14099-33.697316 30.160029-33.511143 90.10774 0.093087 16.103966 2.420249 34.628181 8.191613 55.572646a49.33585 49.33585 0 0 1-34.255836 60.878577z" fill="#FA3239" p-id="12660"></path></svg>
-        <span>by</span>
-        <a href="https://github.com/liuyuhe666" target="_blank">LiuYuhe</a>
+        <Text>by</Text>
+        <Link href="https://github.com/liuyuhe666" target="_blank">LiuYuhe</Link>
       </Flex>
     </>
   )

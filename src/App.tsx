@@ -1,6 +1,6 @@
 import type * as CSS from 'csstype'
 import { UploadOutlined } from '@ant-design/icons'
-import { Button, Divider, Flex, Input, message, Space, Upload } from 'antd'
+import { Button, Divider, Flex, Input, message, Space, Typography, Upload } from 'antd'
 import { domToPng } from 'modern-screenshot'
 import { useState } from 'react'
 import { bigPic, cover, smallPic } from './constants'
@@ -13,6 +13,7 @@ type TextAlign = CSS.Property.TextAlign
 type TextWrap = CSS.Property.TextWrap
 
 export default function App() {
+  const { Text } = Typography
   const [title, setTitle] = useState<string>('微信公众号：爱编程的阿彬')
   const [subTitle, setSubTitle] = useState<string>('@Tenifs')
   const [bigPicStyle, setBigPicStyle] = useState({
@@ -153,32 +154,39 @@ export default function App() {
   }
 
   return (
+
     <div className="container">
       <Header />
       <Divider />
-      <div style={{ width: cover.width, margin: '16px 0', padding: '8px 0', backgroundColor: '#fff', borderRadius: '16px' }}>
-        <Flex gap="large" align="center" vertical justify="center">
-          <Space size="middle" align="center">
-            标题：
-            <Input placeholder="微信公众号：爱编程的阿彬" style={{ width: '200%' }} onChange={e => setTitle(e.target.value)} size="large" />
-          </Space>
-          <Space size="middle" align="center">
-            副标题：
-            <Input placeholder="@Tenifs" style={{ width: '200%' }} onChange={e => setSubTitle(e.target.value)} size="large" />
-          </Space>
-          <Space size="middle" align="center">
-            首图：
-            <Upload {...bigPicUploadProps}>
-              <Button icon={<UploadOutlined />}>Click to Upload</Button>
-            </Upload>
-          </Space>
-          <Space size="middle" align="center">
-            小图：
-            <Upload {...smallPicUploadProps}>
-              <Button icon={<UploadOutlined />}>Click to Upload</Button>
-            </Upload>
-          </Space>
-          <Button type="primary" onClick={exportImage}>导出</Button>
+      <div style={{ width: cover.width, margin: '16px 0', padding: '16px 0' }}>
+        <Flex align="center" justify="center">
+          <Flex gap="large" align="start" vertical justify="center">
+            <Space size="middle" align="center">
+              <Text style={{ marginLeft: '1em' }} strong>标题：</Text>
+              <Input placeholder="微信公众号：爱编程的阿彬" style={{ width: '200%' }} onChange={e => setTitle(e.target.value)} size="large" />
+            </Space>
+            <Space size="middle" align="center">
+              <Text strong>副标题：</Text>
+              <Input placeholder="@Tenifs" style={{ width: '200%' }} onChange={e => setSubTitle(e.target.value)} size="large" />
+            </Space>
+            <Flex justify="space-between" align="center" gap="large">
+              <Space size="middle" align="center">
+                <Text strong style={{ marginLeft: '1em' }}>首图：</Text>
+                <Upload {...bigPicUploadProps}>
+                  <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                </Upload>
+              </Space>
+              <Space size="middle" align="center">
+                <Text strong>小图：</Text>
+                <Upload {...smallPicUploadProps}>
+                  <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                </Upload>
+              </Space>
+            </Flex>
+            <Flex style={{ width: '100%' }} justify="center" align="center">
+              <Button type="primary" onClick={exportImage}>导出</Button>
+            </Flex>
+          </Flex>
         </Flex>
       </div>
 

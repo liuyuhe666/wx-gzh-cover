@@ -1,10 +1,11 @@
-import { Flex } from 'antd'
+import { Flex, Typography } from 'antd'
 
 export default function Header() {
+  const { Title } = Typography
   return (
     <>
       <Flex align="center" justify="center">
-        <p style={{ fontWeight: 900, fontSize: '24px' }}>WX-GZH-COVER</p>
+        <Title>WX-GZH-COVER</Title>
       </Flex>
     </>
   )
